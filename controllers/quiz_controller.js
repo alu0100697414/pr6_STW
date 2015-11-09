@@ -22,6 +22,5 @@ exports.questions = function(req,res) {
     cadena = cadena.concat("Pregunta " + (i+1) + ": " + quiz.getQ(i) + "<br><br>");
   }
 
-  console.log(cadena);
   res.render('quizes/questions', {prg: cadena})
 };
