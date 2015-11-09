@@ -23,6 +23,18 @@ function Quiz() {
       },
     },
 
+    { pregunta: '¿Cuál es el último campeón de la Champions League?',
+      respuesta: function(x) {
+        return (/\s*barcelona\s*$/i).exec(x);
+      }
+    },
+
+    { pregunta: '¿Quién es el protagonista en la película "The Imitation Game"?',
+      respuesta: function(x) {
+        return (/\s*alan turing\s*$/i).exec(x);
+      }
+    },
+
     { /* Código inseguro. ¡No ejecute esta pregunta salvo en un
          entorno en el que el código del "alumno" sea fiable!
        */
@@ -45,12 +57,12 @@ function Quiz() {
   // insertar unas cuantas preguntas sobre
   // la tabla de multiplicar
   var self  = this;
-  for(var i = 0; i<1;i++) {
+  for(var i = 0; i<3;i++) {
     (function() {
       var n1 = Math.randomInt(9)+1;
       var n2 = Math.randomInt(9)+1;
       self.q.push(
-        { pregunta: '¿ '+n1+'x'+n2+"= ?",
+        { pregunta: '¿ '+n1+'x'+n2+" ?",
           respuesta: function(x) {
             return (x == n1*n2);
         }
