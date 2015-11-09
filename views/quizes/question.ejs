@@ -5,12 +5,14 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <h2>QuizULL: el juego de las preguntas.</h2>
+    <center><div id="question">
+      <h2>QuizULL: El juego de las preguntas.</h2>
 
-    <form method="get" action="/quizes/answer">
-      Pregunta: <%= pregunta %><p>
-      <input type="text" name="respuesta" value="Responda aquí" />
-      <input type="submit" value="Enviar" />
-    </form>
+      <form method="get" action="/quizes/answer">
+        Pregunta: <%= pregunta %><p>
+        <input type="text" name="respuesta" value="Responda aquí" />
+        <input type="submit" value="Enviar" />
+      </form>
+    </div></center>
   </body>
 </html>

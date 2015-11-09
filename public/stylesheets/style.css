@@ -1,3 +1,11 @@
-#cuerpo{
+#cuerpo {
+  margin: 5% 10%
+}
+
+#question {
+  margin: 5% 10%
+}
+
+#answer {
   margin: 5% 10%
 }
