@@ -66,7 +66,7 @@ Quiz.prototype.numQuestions = function() {
   return this.q.length;
 }
 
-Quiz.prototype.getQ = function(x) {
+Quiz.prototype.getQ = function(x){
   return this.q[x]['pregunta'];
 }
 
