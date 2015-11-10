@@ -1,3 +1,7 @@
 <h3>Aquí puede ver todas las preguntas que se encontrará en el juego.</h3>
 
-<%- prg %>
+<ul id="lista">
+<% for(var i=0; i<prg.length; i++) {%>
+   <li><%- prg[i] + " " + link_to("Enlace", 'questions/'+(i+1)) %></li>
+<% } %>
+</ul>﻿

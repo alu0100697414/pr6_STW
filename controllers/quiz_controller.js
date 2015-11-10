@@ -16,13 +16,13 @@ exports.answer = function(req, res) {
 
 exports.questions = function(req,res) {
   var nPreg = quiz.numQuestions();
-  var cadena = "";
+  var array = new Array(nPreg);
 
   for(var i=0; i<nPreg; i++) {
-    cadena = cadena.concat("Pregunta " + (i+1) + ": " + quiz.getQ(i) + "<br><br>");
+    array[i] = ("Pregunta " + (i+1) + ": " + quiz.getQ(i));
   }
 
-  res.render('quizes/questions', {prg: cadena})
+  res.render('quizes/questions', {prg: array})
 };
 
 exports.specificQuestion = function(req, res) {
