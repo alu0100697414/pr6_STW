@@ -36,8 +36,7 @@ exports.specificQuestion = function(req, res) {
     res.render('quizes/SpecificQuestion', {prg: "Error en la URL."})
   }
   else {
-    id = id - 1;
-    var cadena = "Pregunta " + (id+1) + ": " + quiz.getQ(id);
+    var cadena = "Pregunta " + (id) + ": " + quiz.getQ(id-1);
 
     res.render('quizes/SpecificQuestion', {prg: cadena})
   }
